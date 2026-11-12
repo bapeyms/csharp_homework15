@@ -6,12 +6,16 @@ class Program
     {
         // 1
         Console.WriteLine("-- TASK 1 --");
-        Play play = new Play("Hamlet", "William Shakespeare", "Tradegy", 1601);
+        Play play = new Play("Hamlet", "William Shakespeare", "Tragedy", 1601);
         play.Print();
         TestDestructor();
         Console.WriteLine("THE END\n");
         
         Console.WriteLine("-- TASK 2 --");
+        using (Shop shop = new Shop("Epicenter", "Ovidiopolis Road, 7", ShopType.Hardware))
+        {
+            shop.Print();
+        }
     }
 
     static void TestDestructor()
